@@ -1,0 +1,169 @@
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Top list</title>
+
+<style>
+img{
+    width:100px;
+    height:100px;
+}
+td{
+
+    text-align:center;
+}
+form{
+    margin:5px;
+}
+button{
+    margin:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="show"> 
+</div>
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.open("GET", "Toplist.xml", true);
+xhttp.send();
+
+function AllContent(xml) {
+	var Toplist = xhttp.responseXML;
+
+	var serializer = new XMLSerializer();
+	var xmlString = serializer.serializeToString(Toplist);
+    //msg='';
+    //msg += xmlString;
+    //document.getElementById("show").innerHTML = msg;
+	alert(xmlString);
+}
+
+function AllItems(xml) {
+	var Song = xml.responseXML;
+    var path = "//Song";
+	msg = '';
+	var nodes = Song.evaluate(path, Song, null, XPathResult.ANY_TYPE, null);
+	var SongN = 0;
+        msg+= '<table border="2"><tr><td>Position on the list</td><td>Name</td><td>Author</td><td>Year of production</td><td>Cover</td></tr>';
+	var result=nodes.iterateNext();
+    while (result){
+		msg += "<tr><td>" +result.children[0].innerHTML + "</td>";
+        msg += "<td>" +result.children[1].innerHTML + "</td>";
+        msg += "<td>" +result.children[2].innerHTML + "</td>";
+        msg += "<td>" +result.children[3].innerHTML + "</td>";
+        msg += "<td><img src='" +result.children[4].innerHTML + "'></td></tr>";
+        result = nodes.iterateNext();
+    }
+    msg+="</table>";
+    document.getElementById("show").innerHTML = msg;
+}
+
+function ShowO(xml){
+	var Song = xml.responseXML;
+	var path = "//Song[@type='orchestral']";
+	msg = '';
+	var nodes = Song.evaluate(path, Song, null, XPathResult.ANY_TYPE, null);
+	msg+= '<table border="2"><tr><td>Position on the list</td><td>Name</td><td>Author</td><td>Year of production</td><td>Cover</td></tr>';
+	var result=nodes.iterateNext();
+	while (result){
+		msg += "<tr><td>" +result.children[0].innerHTML + "</td>";
+        msg += "<td>" +result.children[1].innerHTML + "</td>";
+        msg += "<td>" +result.children[2].innerHTML + "</td>";
+        msg += "<td>" +result.children[3].innerHTML + "</td>";
+        msg += "<td><img src='" +result.children[4].innerHTML + "'></td></tr>";
+		result = nodes.iterateNext();
+	}
+    msg+="</table>";
+    document.getElementById("show").innerHTML = msg;
+}
+function ShowI(xml){
+	var Song = xml.responseXML;
+	var path = "//Song[@type='instrumental']";
+	msg = '';
+	var nodes = Song.evaluate(path, Song, null, XPathResult.ANY_TYPE, null);
+	msg+= '<table border="2"><tr><td>Position on the list</td><td>Name</td><td>Author</td><td>Year of production</td><td>Cover</td></tr>';
+	var result=nodes.iterateNext();
+	while (result){
+		msg += "<tr><td>" +result.children[0].innerHTML + "</td>";
+        msg += "<td>" +result.children[1].innerHTML + "</td>";
+        msg += "<td>" +result.children[2].innerHTML + "</td>";
+        msg += "<td>" +result.children[3].innerHTML + "</td>";
+        msg += "<td><img src='" +result.children[4].innerHTML + "'></td></tr>";
+		result = nodes.iterateNext();
+	}
+    msg+="</table>";
+    document.getElementById("show").innerHTML = msg;
+}
+function ShowIV(xml){
+	var Song = xml.responseXML;
+	var path = "//Song[@type='instrumentalnvocal']";
+	msg = '';
+	var nodes = Song.evaluate(path, Song, null, XPathResult.ANY_TYPE, null);
+	msg+= '<table border="2"><tr><td>Position on the list</td><td>Name</td><td>Author</td><td>Year of production</td><td>Cover</td></tr>';
+	var result=nodes.iterateNext();
+	while (result){
+		msg += "<tr><td>" +result.children[0].innerHTML + "</td>";
+        msg += "<td>" +result.children[1].innerHTML + "</td>";
+        msg += "<td>" +result.children[2].innerHTML + "</td>";
+        msg += "<td>" +result.children[3].innerHTML + "</td>";
+        msg += "<td><img src='" +result.children[4].innerHTML + "'></td></tr>";
+		result = nodes.iterateNext();
+	}
+    msg+="</table>";
+    document.getElementById("show").innerHTML = msg;
+}
+
+   //////////////////////////////////////////////////////////////////////////// 
+   function  Find3(xml){
+        let n = document.getElementById('title').value;;
+	var Song = xml.responseXML;
+    var path = "//Song";
+
+	msg = '';
+	
+	var nodes = Song.evaluate(path, Song, null, XPathResult.ANY_TYPE, null);
+	var SongN = 0;
+        msg+= '<table border="2"><tr><td>Position on the list</td><td>Name</td><td>Author</td><td>Year of production</td><td>Cover</td></tr>';
+	var result=nodes.iterateNext();
+    while (result){
+		if (result.children[1].innerHTML == n){
+		msg += "<tr><td>" +result.children[0].innerHTML + "</td>";
+        msg += "<td>" +result.children[1].innerHTML + "</td>";
+        msg += "<td>" +result.children[2].innerHTML + "</td>";
+        msg += "<td>" +result.children[3].innerHTML + "</td>";
+        msg += "<td><img src='" +result.children[4].innerHTML + "'></td></tr>";
+	
+	
+    msg+="</table>";
+    document.getElementById("show").innerHTML = msg;
+    SongN++;
+    }
+    result = nodes.iterateNext();
+}
+if (SongN==0){
+	alert("This song isn't on my list");
+	}
+    }
+</script>
+<button onclick="AllContent(xhttp)">Show xml content</button>
+<button onclick="AllItems(xhttp)">Show all songs</button>
+<button onclick="ShowO(xhttp)">Show orchestral songs</button>
+<button onclick="ShowI(xhttp)">Show instrumental songs</button>
+<button onclick="ShowIV(xhttp)">Show instrumental and vocal songs</button>
+<br>
+<h4>Write down song name:</h4>
+<form>
+<input type="text" id="title"/>
+</form>
+<button onclick="Find3(xhttp)">Show the song with the given name</button>
+</body>
+</html>

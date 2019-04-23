@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="toplist_template.xsl"?>
+<!DOCTYPE Toplist SYSTEM "Toplist.dtd">
+<Toplist>
+	<Song category="pop" type="instrumentalnvocal" >
+		<position>10</position>
+		<name>Give me love</name>
+		<author type="soloartist">Ed Sheeran</author>
+        <year>2011</year>
+        <cover type="single">https://upload.wikimedia.org/wikipedia/en/c/c1/EdSheeranGiveMeLove.jpg</cover>
+	</Song>
+		<Song category="classical" type="orchestral" >
+		<position>9</position>
+		<name>Spring Waltz</name>
+		<author type="soloartist">Fryderyk Chopin</author>
+        <year>1979</year>
+        <cover type="singel">https://jacobspiano.com/wp-content/uploads/2017/05/Ikke-navngivet-1.png</cover>
+	</Song>
+    <Song category="jazz" type="instrumentalnvocal" >
+		<position>8</position>
+		<name>Almost blue</name>
+		<author type="soloartist">Chet Baker</author>
+        <year>1987</year>
+        <cover type="album">https://images-na.ssl-images-amazon.com/images/I/51B5V528SmL.jpg</cover>
+	</Song>
+    <Song category="acoustic" type="instrumental" >
+		<position>7</position>
+		<name>Polish roads</name>
+		<author type="soloartist">Pat Metcheny</author>
+		 <year>2011</year>
+        <cover type="concert-album">https://upload.wikimedia.org/wikipedia/en/thumb/1/10/What%27s.It.All.About.Pat.Metheny.jpg/220px-What%27s.It.All.About.Pat.Metheny.jpg</cover>
+	</Song>
+    <Song category="classical" type="instrumental" >
+		<position>6</position>
+		<name>Porz Goret</name>
+		<author type="soloartist">Yann Tiersen</author>
+        <year>2016</year>
+        <cover type="album">https://img.discogs.com/Kdl7Zt4g61jQLFGPGgN1AftdxsU=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-9127121-1475241180-9087.jpeg.jpg</cover>
+	</Song>
+    <Song category="filmmusic" type="orchestral" >
+		<position>5</position>
+		<name>Arrival of the birds</name>
+		<author type="band">The Cinematic Orchestra</author>
+        <year>2012</year>
+        <cover type="album">https://i.scdn.co/image/26e6a1170de7b7f62ec31baeed640fda6f9708e8</cover>
+	</Song>
+    <Song category="rap" type="orchestral" >
+		<position>4</position>
+		<name>The Hip Hop History</name>
+		<author type="soloartist">JIMEK</author>
+         <year>2015</year>
+         <cover type="concert-album">https://icdn.2cda.pl/vid/oryginalne/496e11e4387d9f88d6faa4661406bff4-01.jpg</cover>
+	</Song>
+    <Song category="acoustic" type="instrumental" >
+		<position>3</position>
+		<name>Miracle Moutain</name>
+		<author type="soloartist">Masaaki Kishibe</author>
+         <year>2011</year>
+         <cover type="singel">https://i.ytimg.com/vi/OrZ5ExQ86NA/hqdefault.jpg</cover>
+	</Song>
+    <Song category="pop" type="instrumentalnvocal" >
+		<position>2</position>
+		<name>Jestem tego wart</name>
+		<author type="soloartist">Paweł Domagała</author>
+        <year>2016</year>
+        <cover type="album">https://ecsmedia.pl/c/opowiem-ci-o-mnie-b-iext46794301.jpg</cover>
+	</Song>
+    <Song category="jazz" type="instrumentalnvocal" >
+		<position>1</position>
+		<name>Szkodnik</name>
+		<author type="band">Micromusic</author>
+        <year>2011</year>
+        <cover type="concert-album">https://img-1.koncertomania.pl/1/1/1416201953eUqAvuOyvvbcFBN28P7ffpugtj2fjx.jpg</cover>
+	</Song>
+	
+</Toplist>

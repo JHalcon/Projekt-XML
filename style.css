@@ -1,0 +1,30 @@
+/* Background pattern from Toptal Subtle Patterns */
+td{
+    text-align: center;
+    padding:10px;
+}
+table{
+    margin:auto;
+}
+
+#main{
+color:lightgray;
+text-align: center;
+
+
+}
+img{
+
+    width:180px;
+    height:180px;
+}
+body{
+    background-image:url("prism.png");
+    background-repeat: repeat;
+color:white;
+font-size:20px;
+}
+h4{
+
+    font-family:Tahoma;
+}

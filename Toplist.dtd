@@ -1,0 +1,11 @@
+<!ELEMENT Toplist (Song+)>
+<!ELEMENT Song (position, name, author, year, cover)>
+<!ATTLIST Song category CDATA #REQUIRED>
+<!ATTLIST Song type CDATA #REQUIRED>
+<!ELEMENT position (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT cover (#PCDATA)>
+<!ATTLIST cover type CDATA #REQUIRED>
+<!ATTLIST author type CDATA #REQUIRED>
